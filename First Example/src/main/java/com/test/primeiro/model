@@ -1,0 +1,36 @@
+Model: 
+Product: id, name, quantity, value, observation
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.test.firstexampleApplication.java.model.Product;
+import org.springframework.stereotype.Repository;;
+
+@Repository
+public class ProductRepository {
+    
+    private ArrayList<Product> products = new ArrayList<Product>();
+    private Integer ultimoId = 0;
+
+    /**Retorn a list of products
+     * 
+     * @return lista of products
+     */
+
+public List<Product> getAllList(){
+    return products;
+}
+
+/**Method that retorn the product founded by the ID.
+ * @param id of the product that will be found.
+ * @return retorns a product if found. 
+ */
+public Opcional <Product> getByID (Integer id){
+    return products.stream().filter(produto.getId() = id)
+           .stream()
+           .filter(product  -> product.getID()= id)
+           .findFirst();
+} 
+}
